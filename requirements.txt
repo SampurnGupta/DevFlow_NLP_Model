@@ -1,0 +1,25 @@
+# Python
+nltk
+scikit-learn
+numpy
+pandas
+joblib
+
+# Deep Learning
+torch
+transformers
+datasets
+accelerate
+
+# NLP Tools
+spacy
+
+# Notebook / Utilities
+jupyter
+ipykernel
+tqdm
+matplotlib
+seaborn
+
+# LLM API (dataset generation)
+groq

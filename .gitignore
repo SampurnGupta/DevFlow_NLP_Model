@@ -1,0 +1,123 @@
+# ============================================================
+#  Devflow NLP Project — .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Trained Model Artefacts (large binary files)
+# ------------------------------------------------------------
+devflow_artefacts/distilbert/model.safetensors
+devflow_artefacts/svc_pipeline.pkl
+devflow_artefacts/distilbert
+Devflow_NLP_Pipeline.ipynb
+# Devflow_NLP_Pipeline_Final.ipynb
+
+# If you add more model checkpoints / weight files in future:
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.h5
+*.hdf5
+*.onnx
+*.pkl
+*.pickle
+*.joblib
+
+# ------------------------------------------------------------
+# Datasets  (can be re-generated or downloaded separately)
+# ------------------------------------------------------------
+devflow_artefacts/devflow_dataset.csv
+# devflow_dataset.csv
+# *.csv
+
+# ------------------------------------------------------------
+# SpaCy trained pipeline (regenerate with train script)
+# ------------------------------------------------------------
+devflow_artefacts/spacy_ner/
+
+# ------------------------------------------------------------
+# Jupyter Notebook outputs & checkpoints
+# ------------------------------------------------------------
+.ipynb_checkpoints/
+# Strip cell outputs before committing (keep source only):
+# Devflow_NLP_Pipeline.ipynb         ← consider nbstripout
+# Devflow_NLP_Pipeline_Final.ipynb   ← consider nbstripout
+
+# ------------------------------------------------------------
+# Report / Document binaries  (track via release assets)
+# ------------------------------------------------------------
+*.pdf
+*.docx
+*.doc
+*.pptx
+
+# ------------------------------------------------------------
+# Python environment & cache
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+site-packages/
+
+# pip / conda
+pip-log.txt
+pip-delete-this-directory.txt
+.conda/
+
+# ------------------------------------------------------------
+# OS & editor noise
+# ------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains / PyCharm
+.idea/
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+
+# ------------------------------------------------------------
+# Logs & temporary files
+# ------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.orig
+logs/
+temp/
+
+# ------------------------------------------------------------
+# Secrets & credentials (never commit these!)
+# ------------------------------------------------------------
+.env
+.env.*
+secrets.json
+credentials.json
+service_account.json
+*.pem
+*.key
