@@ -5,9 +5,12 @@
 # ------------------------------------------------------------
 # Trained Model Artefacts (large binary files)
 # ------------------------------------------------------------
+# devflow_artefacts
 devflow_artefacts/distilbert/model.safetensors
-devflow_artefacts/svc_pipeline.pkl
+# devflow_artefacts/svc_pipeline.pkl
+# devflow_artefacts/label_maps.json
 devflow_artefacts/distilbert
+devflow_artefacts/devflow_dataset.csv
 Devflow_NLP_Pipeline.ipynb
 # Devflow_NLP_Pipeline_Final.ipynb
 
@@ -20,14 +23,13 @@ Devflow_NLP_Pipeline.ipynb
 *.h5
 *.hdf5
 *.onnx
-*.pkl
+# *.pkl
 *.pickle
 *.joblib
 
 # ------------------------------------------------------------
 # Datasets  (can be re-generated or downloaded separately)
 # ------------------------------------------------------------
-devflow_artefacts/devflow_dataset.csv
 # devflow_dataset.csv
 # *.csv
 
