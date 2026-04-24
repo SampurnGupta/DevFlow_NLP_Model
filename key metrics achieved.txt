@@ -1,0 +1,91 @@
+key metrics achieved:
+
+=== Model A: LinearSVC ===
+Macro F1 (test): 0.9948
+
+              precision    recall  f1-score   support
+
+       debug       0.97      1.00      0.98        28
+    generate       1.00      1.00      1.00        27
+    refactor       1.00      0.96      0.98        27
+     explain       1.00      1.00      1.00        27
+    scaffold       1.00      1.00      1.00        27
+        test       1.00      1.00      1.00        27
+    document       1.00      1.00      1.00        27
+
+    accuracy                           0.99       190
+   macro avg       1.00      0.99      0.99       190
+weighted avg       0.99      0.99      0.99       190
+
+
+Starting DistilBERT fine-tuning...
+Epoch	Training Loss	Validation Loss	Macro F1
+1	1.876807	1.402223	0.765837
+2	0.569775	0.302457	0.952809
+3	0.089878	0.070735	0.994805
+4	0.024752	0.048597	0.984223
+5	0.013047	0.040573	0.989514
+6	0.011083	0.039011	0.989514
+7	0.009196	0.036945	0.989514
+8	0.008149	0.036563	0.989514
+
+
+=== Model B: DistilBERT ===
+Macro F1 (test): 0.9948
+
+              precision    recall  f1-score   support
+
+       debug       0.97      1.00      0.98        28
+    generate       1.00      1.00      1.00        27
+    refactor       1.00      0.96      0.98        27
+     explain       1.00      1.00      1.00        27
+    scaffold       1.00      1.00      1.00        27
+        test       1.00      1.00      1.00        27
+    document       1.00      1.00      1.00        27
+
+    accuracy                           0.99       190
+   macro avg       1.00      0.99      0.99       190
+weighted avg       0.99      0.99      0.99       190
+
+
+==================================================
+         MODEL COMPARISON SUMMARY
+==================================================
+  LinearSVC  macro F1 : 0.9948
+  DistilBERT macro F1 : 0.9948
+  Delta               : +0.0000
+
+Per-class F1:
+  intent   svc_f1  bert_f1  delta
+   debug 0.982456 0.982456    0.0
+generate 1.000000 1.000000    0.0
+refactor 0.981132 0.981132    0.0
+ explain 1.000000 1.000000    0.0
+scaffold 1.000000 1.000000    0.0
+    test 1.000000 1.000000    0.0
+document 1.000000 1.000000    0.0
+
+Running ablation study...
+  Full pipeline                 : 0.9948
+  − Normalisation               : 0.9948
+  − Stop-word removal           : 0.9948
+  − Lemmatisation               : 0.9948
+  − Bigrams                     : 0.9948
+
+F1 delta vs full pipeline:
+  Full pipeline                 : +0.0000
+  − Normalisation               : +0.0000
+  − Stop-word removal           : +0.0000
+  − Lemmatisation               : +0.0000
+  − Bigrams                     : +0.0000
+
+SVC  mean F1 : 0.9953 ± 0.0049
+  BERT mean F1 : 0.9990 ± 0.0021
+  t-statistic  : 3.2771
+  p-value      : 0.0096
+  Significant  : YES (α = 0.05)
+
+Cohen's Kappa (automated vs human, 10% sample): 0.8729
+Interpretation: Substantial agreement
+
+Note: Replace simulated human_labels with your actual human annotations.
